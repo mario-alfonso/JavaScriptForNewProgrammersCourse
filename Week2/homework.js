@@ -34,6 +34,14 @@
 */
 function findSmallestOfThreeNumbers(a, b, c){
     
+    if ( a < b && a < c ) {
+        return a;
+    } else if ( b < a && b < c ) {
+        return b;
+    } else {
+        return c;
+    }
+
     //Add your code here
 }
 
@@ -82,7 +90,7 @@ else{
 function formatName(firstName, lastName){
     //Assignment 1
     //add your code here
-    
+    return lastName + ', ' + firstName ;
 }
 
 let firstName = "John"
@@ -117,7 +125,20 @@ else{
 
 //Add your code here to create the object
 
-let vehicle = {}; //change {} to your object
+let vehicle = {
+    color: "red",
+    weight: 1,
+    height: 6,
+    category: function() {
+        if ( this.weight >= 4) {
+            return "Heavy Duty";            
+        } else if ( this.weight >= 2 ) {
+            return "medium";
+        } else {
+            return "light";
+        }
+    }
+}; //change {} to your object
 
 function print(vehicle){
 
@@ -155,7 +176,19 @@ print(vehicle)
  * 
  * Objective: use of boolean conditions
  */
+function IsAWin( cell1, cell2, cell3 ) {
+    if ( "x".localeCompare( cell1 ) == 0 && "x".localeCompare( cell2 ) == 0 && "x".localeCompare( cell3 ) == 0 ) {
+        console.log( "X's a win!");
+    } else if ( "o".localeCompare( cell1 ) == 0 && "o".localeCompare( cell2 ) == 0 && "o".localeCompare( cell3 ) == 0 ) {
+        console.log("O's a win!");        
+    } else {
+        console.log("Not a win!");
+    }
+}
 
+IsAWin("x", "x", "x")
+IsAWin("o", "o", "o")
+IsAWin("x", "o", "x")
  /**
   * Assignment 5
   * 
@@ -171,9 +204,27 @@ print(vehicle)
   * 
   * Objective: Think like a programmer and use of math operators
   */
+function calculateYearOfBirth( months ) {
+  let monthsRem = months % 12;
+  let startingYear = 2020;
+  let lessYears;
+  if (monthsRem == 0 ) {
+      // this is exact year; i.e. 12, 24, 36 months
+      lessYears = months / 12;
+  }else {
+      let calcMonth  = months - monthsRem;
+      lessYears = calcMonth / 12 + 1;
+  }
+  return 2020 - lessYears;
+}
 
+console.log( "14 months: " + calculateYearOfBirth(14) );
+console.log( "34 months: " + calculateYearOfBirth(34) );
+console.log( "24 months: " + calculateYearOfBirth(24) );
+console.log( "36 months: " + calculateYearOfBirth(36) );
+console.log( "48 months: " + calculateYearOfBirth(48) );
 /*
-    Assignment 5
+    Assignment 6
     Task:
     
     Create a function that prints the following information to the console
@@ -190,3 +241,30 @@ print(vehicle)
     Easy assignment to do excercise a little creativity
     
 */
+function printPerson( person ) {
+    console.log( "Name: " + person.firstName + " " + person.initial + " " + person.lastName );
+    console.log( "Hobbie: " + person.hobbie );
+    console.log( "Home State: " + person.homeState );
+}
+
+let me = {
+    firstName: "Mario",
+    initial: "A",
+    lastName: "Cortez",
+    hobbie: "Programming",
+    homeState: "TX"
+}
+
+console.log("*** Me ****")
+printPerson(  me );
+
+let son = {
+    firstName: "Mario",
+    initial: "I",
+    lastName: "Cortez",
+    hobbie: "Playing in Tablet",
+    homeState: "VA"
+}
+
+console.log("*** Son ****")
+printPerson( son );
