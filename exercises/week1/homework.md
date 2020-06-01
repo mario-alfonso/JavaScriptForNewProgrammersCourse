@@ -3,3 +3,5 @@
 
 ###Salaries & Companies Using JS
   Looking at the salary ranges we can see which companies employ people with JS skills. The average base salary averages at  $79k/yr according to [Glassdoor.com](https://www.glassdoor.com/Salaries/javascript-developer-salary-SRCH_KO0,20.htm).  The base pay ranges from $57k/yr to $117k/yr. Companies like Tesla, the electric car maker, employ JavaScript developers. Moreover, banks and retailer stores also employ JavaScript developers.  As well as a broad range of companies since JavaScript is the programming language of the web hence the digital world.
+
+  

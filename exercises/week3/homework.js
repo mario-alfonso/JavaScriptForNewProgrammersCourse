@@ -13,10 +13,13 @@ function test(actual, expected, testName){
 //exercise 1
 function isUpper(myChar){
     let result = false;
-    //your code here
-    //check if upper and set result to
-    //to true if the value is upperCase
-    //use the ascii values to check
+    let valCharA = 'A'.charCodeAt(0);
+    let valCharZ = 'Z'.charCodeAt(0);
+    let valCharInput = myChar.charCodeAt(0);
+
+    if ( (valCharInput >=  valCharA) && (valCharInput <= valCharZ) ) {
+        result = true;
+    }
 
     return result;
 }
@@ -33,10 +36,13 @@ test(isUpper('m'), false, "IsUpper 7")
 //exercise 2
 function isLower(myChar){
     let result = false;
-    //your code here
-    //check if myChar is lower and set result to
-    //to true if the value is upperCase
-    //use the ascii values to check
+    let valCharLowerA = 'a'.charCodeAt(0);
+    let valCharLowerZ = 'z'.charCodeAt(0);
+    let valCharInput = myChar.charCodeAt(0);
+
+    if ( (valCharInput >=  valCharLowerA) && (valCharInput <= valCharLowerZ) ) {
+        result = true;
+    }
 
     return result;
 }
@@ -54,7 +60,7 @@ test(isLower('z'), true, "IsLower 7")
 //convert the character to lower case
 //
 function toLowerCase(myChar){
-    let newChar = myChar;
+    let newChar = myChar.toLowerCase();
 
     return newChar;
 }
