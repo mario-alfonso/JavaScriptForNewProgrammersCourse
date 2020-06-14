@@ -18,7 +18,7 @@ console.log(result);
 let names = ["homer", "bart", "marge", "list"]
 
 let filteredNames = myFilter( names, function(item){
-    return item.localeCompare("homer") != 0
+    return item.localeCompare("homer") != 0;
 });
 console.log(filteredNames);
 
